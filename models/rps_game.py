@@ -1,7 +1,9 @@
-from models.player import *
+from models.player import Player
 
-# player_1 = Player("Olivia","rock")
-# player_2 = Player("Patrick","paper")
+class Game:
+    def __init__(self,player_1,player_2):
+        self.player_1 = player_1
+        self.player_2 = player_2
 
 # def get_players_choices(player_1,player_2):
 #     player_1 = Player.choice
@@ -22,5 +24,22 @@ def determine_result(choice_1,choice_2):
         result = "Player 1 wins with scissors"
     elif choice_1 == "paper" and choice_2 == "scissors":
         result = "Player 2 wins with scissors"
+    return result
+
+def determine_2player_game_result(player_1,player_2):
+    if player_1.choice == player_2.choice:
+        result = "The game is a Draw"
+    elif player_1.choice == "rock" and player_2.choice == "scissors":
+        result = f"{player_1.name} wins with rock"
+    elif player_1.choice == "scissors" and player_2.choice == "rock":
+        result = f"{player_2.name} wins with rock"
+    elif player_1.choice == "paper" and player_2.choice == "rock":
+        result = f"{player_1.name} wins with paper"
+    elif player_1.choice == "rock" and player_2.choice == "paper":
+        result = f"{player_2.name} wins with paper"
+    elif player_1.choice == "scissors" and player_2.choice == "paper":
+        result = f"{player_1.name} wins with scissors"
+    elif player_1.choice == "paper" and player_2.choice == "scissors":
+        result = f"{player_2.name} wins with scissors"
     return result
     
