@@ -1,21 +1,26 @@
 from models.player import *
 
-player_1 = Player("Olivia","rock")
-player_2 = Player("Patrick","paper")
+# player_1 = Player("Olivia","rock")
+# player_2 = Player("Patrick","paper")
 
-def determine_result(player_1,player_2):
-    if player_1.choice == player_2.choice:
+# def get_players_choices(player_1,player_2):
+#     player_1 = Player.choice
+#     player_2 = Player.choice
+
+def determine_result(choice_1,choice_2):
+    if choice_1 == choice_2:
         result = "The game is a Draw"
-    elif player_1.choice == "rock" and player_2.choice == "scissors":
+    elif choice_1 == "rock" and choice_2 == "scissors":
         result = "Player 1 wins with rock"
-    elif player_1.choice == "scissors" and player_2.choice == "rock":
+    elif choice_1 == "scissors" and choice_2 == "rock":
         result = "Player 2 wins with rock"
-    elif player_1.choice == "paper" and player_2.choice == "rock":
+    elif choice_1 == "paper" and choice_2 == "rock":
         result = "Player 1 wins with paper"
-    elif player_1.choice == "rock" and player_2.choice == "paper":
+    elif choice_1 == "rock" and choice_2 == "paper":
         result = "Player 2 wins with paper"
-    elif player_1.choice == "scissors" and player_2.choice == "paper":
+    elif choice_1 == "scissors" and choice_2 == "paper":
         result = "Player 1 wins with scissors"
-    elif player_1.choice == "paper" and player_2.choice == "scissors":
+    elif choice_1 == "paper" and choice_2 == "scissors":
         result = "Player 2 wins with scissors"
+    return result
     
