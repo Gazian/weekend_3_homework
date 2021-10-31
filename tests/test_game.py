@@ -3,7 +3,6 @@ import unittest
 from models.player import Player
 from models.rps_game import Game, determine_result, determine_2player_game_result
 
-
 class TestGame(unittest.TestCase):
     def setUp(self):
         self.player_1 = Player("Olivia","rock")

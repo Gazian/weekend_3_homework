@@ -1,9 +1,9 @@
 from models.player import Player
+  
+player_1 = Player("Olivia","scissors")
+player_2 = Player("Patrick","paper")
 
-class Game:
-    def __init__(self,player_1,player_2):
-        self.player_1 = player_1
-        self.player_2 = player_2
+# players = [player_1,player_2]
 
 # def get_players_choices(player_1,player_2):
 #     player_1 = Player.choice

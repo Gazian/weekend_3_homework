@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%block content %}
+<h1>Rock Paper Scissors Game</h1>
+  <br>
+
+    <div>
+        <h4><p> 
+           Player 1: <b>  {{ player_1.name }} </b>
+           <br>
+           Player 1 choice: <b>  {{ player_1.choice }} </b>
+        </p>
+        <p>
+            Player 2: <b>  {{ player_2.name }} </b>
+            <br>
+            Player 2 choice: <b>  {{ player_2.choice }} </b>
+         </p></h4>
+         <p>
+             <h3>{{ result }}</h3>
+         </p>
+    </div>
+    {% endblock %}
